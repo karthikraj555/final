@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Mobile Bill Calculation</title>
+<center>
+<h1>Electricity Bill Calculation</h1>
+</center>
+<script>
+
+function myfunction()
+{
+var a=parseInt(document.myform.fname.value);
+	var cost;
+        
+if(a<=100)
+{
+cost=(a*2);
+}
+else
+{
+cost=(100*2)+((a-100)*3);
+}
+alert("Bill: " + cost);
+}
+</script>
+</head>
+
+
+<body>
+<center>
+<form name="myform" method="post" >
+<table border=1
+
+<tr>
+  <td>Mobile</td>
+  <td><input type="number" name="Mobile Number:" pattern="[0-9]{1,8}" required >
+  
+ </tr>
+
+<tr>
+  <td>Name</td>
+  <td><input type="text"  name="Name" pattern="[A-Zd.]{1,}[a-zd.]{2,}"  required>
+ 
+ </tr>
+
+ <tr>
+  <td>Email</td>
+  <td><input type="email"  name="Email" required>
+  
+ </tr>
+
+ <tr>
+  <td>Number of units</td>
+  <td><input type="number" name="fname" required>
+  
+ </tr>
+
+
+<tr>
+   <td colspan="3"><input type="button" value="Calculate electricity charges and display" onclick="myfunction()" >
+</tr>
+
+</table>
+</form>
+</center>
+</body>
+</html>
